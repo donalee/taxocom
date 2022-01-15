@@ -1,6 +1,6 @@
 # TaxoCom: A Framework for Topic Taxonomy Completion
 
-- This is the author code of ["TaxoCom: Topic Taxonomy Completion with Hierarchical Discovery of Novel Topic Cluster (WWW 2022)"](https://to-be-appeared).
+- This is the author code of ["TaxoCom: Topic Taxonomy Completion with Hierarchical Discovery of Novel Topic Clusters (WWW 2022)"](https://to-be-appeared).
 - This code is implemented based on the author code of ["TaxoGen: Unsupervised Topic Taxonomy Construction by Adaptive Term Embedding and Clustering (KDD 2018)"](https://arxiv.org/abs/1812.09551) at [this repository](https://github.com/franticnerd/taxogen).
 
 ## Overview
