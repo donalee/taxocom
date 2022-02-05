@@ -24,8 +24,8 @@ The overview of the TaxoCom framework which discovers the complete topic taxonom
 
 - Download the datasets from the following links, then place them in `./data/nyt` and `./data/arxiv`, respectively.
 
-  - [NYT dataset](https://drive.google.com/file/d/1ZxlUlNlm9NWVHNpObkX-xZZAq-YFm2LK/view?usp=sharing)
-  - [arXiv dataset](https://drive.google.com/file/d/1cYEOJqDAjfhBDYwA00ae_KrNXsHsXlxP/view?usp=sharing)
+  - [NYT dataset](https://drive.google.com/file/d/1UPoCLDyCDaP-_rWKfGSurNzY9DM0-OWJ/view?usp=sharing)
+  - [arXiv dataset](https://drive.google.com/file/d/1wChAp6wyCR3ikXKpaYjuBJaLnDykzTJa/view?usp=sharing)
 
 #### STEP 3. Execute the TaxoCom framework
 
