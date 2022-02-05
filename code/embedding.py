@@ -49,6 +49,7 @@ def train_josd(node_dir, node_name, docs, doc_ids, taxonomy):
     run_command += ['-cate-emb', os.path.join(node_dir, filenames.center_embeddings)]
 
     subprocess.call(run_command)
+    os.remove(input_f)
 
 def run_embedding(input_corpus, n_expand, node_dir, node_name):
 

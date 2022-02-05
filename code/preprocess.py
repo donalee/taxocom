@@ -125,7 +125,7 @@ def main(raw_dir, input_dir):
     trim_terms(raw_term_file, term_file, emb_file)
     print('Done trimming the terms.')
 
-    trim_document_set(raw_doc_file, raw_doc_label_file, doc_file, doc_label_file, term_file)
+    trim_document_set(raw_doc_file, raw_doc_label_file, doc_file, doc_label_file, term_file, doc_label_flag=False)
     print('Done trimming the documents.')
 
     gen_doc_term_cnt_file(doc_file, doc_term_cnt_file)

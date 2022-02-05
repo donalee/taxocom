@@ -30,6 +30,7 @@ def recur(input_corpus, node_dir, node_name, filter_tau, n_locterms, betas, leve
         tgt_file = os.path.join(child_dir, filenames.embeddings)
         copy_file(src_file, tgt_file)
         recur(input_corpus, child_dir, child_name, filter_tau, n_locterms, betas, level+1)
+        os.remove(tgt_file)
 
 def main(args):
     input_dir = os.path.join(args.data_dir, args.dataset, 'input')
@@ -64,7 +65,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed_taxo', default='seed_taxo', type=str, help='name of the given taxonomy')
     parser.add_argument('--filter_tau', default=0.3, type=float, help='threshold for filtering out non-anchor terms')
     parser.add_argument('--n_locterms', default=100, type=int, help='number of relevant terms for retrieving docs')
-    parser.add_argument('--betas', default=[1.5, 3.0], nargs='+', type=float, help='beta for the novelty threshold')
+    parser.add_argument('--betas', default=[1.8, 3.0], nargs='+', type=float, help='beta for the novelty threshold')
     args = parser.parse_args()
 
     main(args)

@@ -26,7 +26,7 @@ def recursion(root_dir, output_file, N):
             cluster_namespace = c_name + '/' + cluster
             q.put((cluster_folder, cluster_namespace))
 
-            terms = clus_map[clus_id][:N]
+            terms = clus_map.get(clus_id, [])[:N]
             terms_str = ','.join(terms)
             g.write('%s\t%s\n' % (cluster_namespace, terms_str))
 
