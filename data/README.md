@@ -18,9 +18,10 @@ bash run_preprocss.sh <dataset-name>
 - Then, it outputs several files required for executing the TaxoCom framework by preprocessing your files
 - (Optional) You can leverage term integrity scores by placing the file `term_integrity.txt` in `<dataset-name>/input`
 
-**Step 3. Place the file `seed_taxo.txt` in the directory `<dataset-name>/raw/`**
+**Step 3. Place the file `<seed-taxo-name>.txt` in the directory `<dataset-name>/raw/`**
 
-- `seed_taxo.txt`: Each row lists a parent node (i.e., topic) and its child nodes (i.e., sub-topics), separated by a tab, which provides information of the initial topic structure
+- This file provides information of the initial topic structure (i.e., a partial hierarchy of topic names)
+- Each row lists a parent node (i.e., a topic) and its child nodes (i.e., sub-topics), separated by a tab
 ```
 * <fisrt-level-topic-1> <first-level-topic-2> ...
 <first-level-topic-1>  <second-level-topic-1a> <second-level-topic-1b> ...
