@@ -41,9 +41,9 @@ def main(args):
     corpus_file = os.path.join(input_dir, filenames.docs)
     index_file = os.path.join(input_dir, filenames.index)
     term_freq_file = os.path.join(input_dir, filenames.term_freq)
-    term_intergrity_file = os.path.join(input_dir, filenames.term_integrity)
+    term_integrity_file = os.path.join(input_dir, filenames.term_integrity)
     taxo_file = os.path.join(input_dir, args.seed_taxo+'.txt')
-    input_corpus = DataSet(corpus_file, index_file, term_freq_file, taxo_file, term_intergrity_file)
+    input_corpus = DataSet(corpus_file, index_file, term_freq_file, taxo_file, term_integrity_file)
     end = time.time()
     print('[Main] Done reading the full data - %s seconds' % (end - start))
 

@@ -1,5 +1,6 @@
 import os, sys
 import filenames
+import argparse
 from collections import Counter
 
 def trim_terms(raw_term_file, term_file, embedding_file):
@@ -112,7 +113,7 @@ def main(raw_dir, input_dir):
     raw_doc_file = os.path.join(raw_dir, filenames.docs)
     raw_doc_label_file = os.path.join(raw_dir, filenames.doc_labels)
     raw_term_file = os.path.join(raw_dir, filenames.terms)
-    emb_file = os.path.join(input_dir, 'embeddings.txt')
+    emb_file = os.path.join(input_dir, filenames.embeddings)
 
     ## Following are four output files
     doc_file = os.path.join(input_dir, filenames.docs)
@@ -139,7 +140,12 @@ def main(raw_dir, input_dir):
 
 
 if __name__ == '__main__':
-    dataset = sys.argv[1]
-    raw_dir = os.path.join('../data', dataset, 'raw')
-    input_dir = os.path.join('../data/', dataset, 'input')
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data_dir', default='../data/', type=str, help='path to the data directory')
+    parser.add_argument('--dataset', default='nyt', type=str, help='name of the dataset')
+    args = parser.parse_args()
+
+    raw_dir = os.path.join(args.data_dir, args.dataset, 'raw')
+    input_dir = os.path.join(args.data_dir, args.dataset, 'input')
     main(raw_dir, input_dir)

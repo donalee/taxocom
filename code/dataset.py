@@ -7,7 +7,7 @@ import filenames
 
 # Entire input corpus
 class DataSet:
-    def __init__(self, doc_file, index_file, term_freq_file, taxo_file, integrity_file=None):
+    def __init__(self, doc_file, index_file, term_freq_file, taxo_file, integrity_file):
         self.docs = self.load_docs(doc_file)
         self.term_doc_map = self.load_index(index_file)
         self.term_freq_map = self.load_term_freq(term_freq_file)
@@ -35,7 +35,7 @@ class DataSet:
         return term_doc_map
 
     def load_term_integrity(self, integrity_file):
-        if integrity_file is None: return None
+        if not os.path.isfile(integrity_file): return None
         term_integrity = {}
         with open(integrity_file, 'r') as f:
             for line in f:
@@ -107,7 +107,7 @@ class SubDataSet:
         return term_to_vec
 
     def load_embeddings(self, emb_file):
-        if os.path.isfile(emb_file) == False: return []
+        if not os.path.isfile(emb_file): return []
         embeddings = []
         with open(emb_file, 'rb') as fin:
             header = fin.readline()
